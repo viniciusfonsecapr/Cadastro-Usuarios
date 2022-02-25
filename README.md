@@ -1,6 +1,12 @@
-# Cadastro de Usuarios Utilizando ReactJs
+## Cadastro de Usuarios Utilizando ReactJs e NodeJs
 
-![image](https://user-images.githubusercontent.com/87347314/155631199-a245db16-eccf-4dac-8873-f13bb5368fcf.png)
+# Tela Inical que o usuario acesa:
+-Nela contem campo para cadastro de nome e idade.
+![image](https://user-images.githubusercontent.com/87347314/155631276-324fafdd-1d71-41c9-aed3-679aaa1d1cca.png)
+
+# Tela Primaria Armazenando os Dados obtidos
+- (Em breve sera feito para que ela abra uma tela secundaria com essas informações)
+![image](https://user-images.githubusercontent.com/87347314/155631671-8ed5e3fb-89a5-4235-b928-1891a7b94ab9.png)
 
 ## Available Scripts
 
