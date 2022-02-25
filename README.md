@@ -1,6 +1,6 @@
 ## Cadastro de Usuarios Utilizando ReactJs e NodeJs
 
-# Tela Inical que o usuario acesa:
+# Tela Inical que o usuario acessa:
 -Nela contem campo para cadastro de nome e idade.
 ![image](https://user-images.githubusercontent.com/87347314/155631276-324fafdd-1d71-41c9-aed3-679aaa1d1cca.png)
 
