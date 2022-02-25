@@ -2,6 +2,7 @@
 
 # Tela Inical que o usuario acessa:
 - Nela contem campo para cadastro de nome e idade. <br><br>
+- Todos os dados são consumidos via Axios da Api que está em localhost!
 ![image](https://user-images.githubusercontent.com/87347314/155631276-324fafdd-1d71-41c9-aed3-679aaa1d1cca.png)
 
 # Tela Primaria Armazenando os Dados obtidos
