@@ -1,54 +1,53 @@
-import React, {useState, useRef} from "react"; 
+import React, {useState, useEffect } from "react"; 
+import {useHistory} from 'react-router-dom'
 
+import H1 from '../../components/Title'
+import ContainerI from '../../components/ContainerItens'
+import Buttons from '../../components/Button'
+
+import axios from 'axios';
 import {
   Container,
   Image,
-  ContainerItems,
-  H1,
-  InputLabel,
-  Input,
-  Button,
-  User
+  User,
 } from "./style";
 
-import People from "../../assets/people.svg";
+import People from "../../assets/people2.svg";
 import Trash from "../../assets/trash.svg"
-import Arrow from "../../assets/arrow.svg";
+import Arrow from "../../assets/arrow.svg"
 
 
-
-
-function App() {
+function Users() {
   // const users = [];
   const [users, setUsers] = useState([]);
-  const inputName = useRef();
-  const inputAge = useRef();
 
+  const history = useHistory();
 
-  function addNewUser(){
-   setUsers([...users, {id:Math.random(), name:inputName.current.value, age:inputAge.current.value}]);
+  useEffect(() => {
+    async function fetchUsers(){
+      const { data :newUsers } = await axios.get("http://localhost:3001/users")
+      setUsers(newUsers);
+    }
+    fetchUsers()
+  }, []);
 
-  }
-  function deleteUsers(userId){
+  async function deleteUsers(userId){
+    await axios.delete(`http://localhost:3001/users/${userId}`)
+
     const newUsers = users.filter(user => user.id !== userId)
     setUsers(newUsers)
   }
 
-
+  function goBackPage(){
+    history.push("/")
+  }
 
   return (
     <Container>
       <Image alt="logo" src={People}></Image>
-      <ContainerItems>
-        <H1>Olá!</H1>
-        <InputLabel>Nome</InputLabel>
-        <Input ref={inputName} placeholder="Vinicius"></Input>
-
-        <InputLabel>Idade</InputLabel>
-        <Input ref={inputAge} placeholder="23"></Input>
-
-        <Button onClick={addNewUser}>Cadastrar <img alt="seta" src={Arrow}></img></Button>
-
+      <ContainerI isBlur={true}>
+        <H1>Usuários</H1>
+        
         <ul>
           {users.map((user) => (
               <User key={user.id}>
@@ -59,9 +58,12 @@ function App() {
               </User>
           ))}
         </ul>
-      </ContainerItems>
+        <Buttons isBack={true} onClick={goBackPage}>
+        <img alt="seta" src={Arrow}></img> Voltar 
+        </Buttons>
+      </ContainerI>
     </Container>
   );
 }
 
-export default App;
+export default Users;

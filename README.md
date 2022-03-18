@@ -1,12 +1,14 @@
 ## Cadastro de Usuarios Utilizando ReactJs e NodeJs
 
-# Tela Inicial que o usuario acessa:
+# Tela Inical que o usuario acessa:
 - Nela contem campo para cadastro de nome e idade. <br><br>
 - Todos os dados são consumidos via Axios da Api que está em localhost!
 ![image](https://user-images.githubusercontent.com/87347314/155631276-324fafdd-1d71-41c9-aed3-679aaa1d1cca.png)
 
-# Tela Armazenando os Dados obtidos
-![image](https://user-images.githubusercontent.com/87347314/158922717-6cc3e009-0e59-4a08-b056-d31bb121c77e.png)
+# Tela Primaria Armazenando os Dados obtidos
+- (Em breve sera feito para que ela abra uma tela secundaria com essas informações)
+![image](https://user-images.githubusercontent.com/87347314/155631671-8ed5e3fb-89a5-4235-b928-1891a7b94ab9.png)
+
 ## Available Scripts
 
 In the project directory, you can run:
